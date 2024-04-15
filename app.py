@@ -1,10 +1,6 @@
 import time
 import streamlit as st
 import os
-import keyboard
-import psutil
-
-allowed_peeps = ['hkm']
 
 
 if st.button('clear'):
@@ -20,16 +16,13 @@ def find_program(ques):
             st.image(os.path.join(directory, file_name))
 
 pass_key = st.text_input('Enter the key (needed for py)', type='password', label_visibility="hidden", key='first_key')
-second_pass = st.text_input('Enter the key (needed for py)', type='password', label_visibility="hidden", key='second')
 ques = st.text_input('Enter the problem', type='password', key='ques', label_visibility="hidden")
 
 
-if st.button('X'):
-    if ques != '': 
-        if pass_key == 'pypip':
-            for peeps in allowed_peeps:
-                if second_pass == peeps :
-                    find_program(ques)
+
+if ques != '':
+    if pass_key ==  'hkm' or 'HKM':                
+        find_program(ques)
 
 
 
