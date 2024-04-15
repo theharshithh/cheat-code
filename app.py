@@ -21,7 +21,7 @@ ques = st.text_input('Enter the problem', type='password', key='ques', label_vis
 
 
 if ques != '':
-    if pass_key ==  'hkm' or 'HKM':                
+    if pass_key ==  'pypip' or 'HKM':                
         find_program(ques)
 
 
